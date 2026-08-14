@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper dark:bg-paper-dark text-ink dark:text-paper font-body antialiased transition-colors duration-200;
+}
+
+::selection {
+  @apply bg-moss/20;
+}
+
+/* Focus visibility for keyboard users */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid theme("colors.moss");
+  outline-offset: 2px;
+}
+
+.prose-inkwell {
+  @apply max-w-none;
+}
+.prose-inkwell h1 {
+  @apply font-display text-3xl md:text-4xl font-semibold mt-8 mb-4 text-ink dark:text-paper;
+}
+.prose-inkwell h2 {
+  @apply font-display text-2xl md:text-3xl font-semibold mt-8 mb-3 text-ink dark:text-paper;
+}
+.prose-inkwell h3 {
+  @apply font-display text-xl md:text-2xl font-semibold mt-6 mb-2 text-ink dark:text-paper;
+}
+.prose-inkwell p {
+  @apply text-base md:text-lg leading-relaxed mb-4 text-ink-soft dark:text-paper/85;
+}
+.prose-inkwell ul,
+.prose-inkwell ol {
+  @apply mb-4 ml-6 space-y-1 text-ink-soft dark:text-paper/85;
+}
+.prose-inkwell ul {
+  @apply list-disc;
+}
+.prose-inkwell ol {
+  @apply list-decimal;
+}
+.prose-inkwell blockquote {
+  @apply border-l-4 border-moss pl-4 italic my-4 text-ink-soft dark:text-paper/70;
+}
+.prose-inkwell code {
+  @apply bg-ink/5 dark:bg-paper/10 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+.prose-inkwell pre {
+  @apply bg-ink text-paper dark:bg-black/40 p-4 rounded-lg overflow-x-auto my-4 text-sm;
+}
+.prose-inkwell pre code {
+  @apply bg-transparent p-0;
+}
+.prose-inkwell a {
+  @apply text-moss dark:text-moss-dark underline underline-offset-2 hover:text-clay transition-colors;
+}
+.prose-inkwell img {
+  @apply rounded-lg my-4;
+}
